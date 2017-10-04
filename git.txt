@@ -1,6 +1,8 @@
+// get repo with Go
+- go get -u github.com/username/repo // -u = update
 
 // push to git
 - git status
 - git add --all
-- git commit -m "message"
+- git commit -m "message" // -m = message
 - git push
