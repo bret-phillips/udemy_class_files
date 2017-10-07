@@ -1,0 +1,12 @@
+package "package name"                            // declare package name
+
+import " "library/file name/location" "           // import file/library
+
+var count = 0                                     // create a variable
+
+for i := 1; i < 5; i++ {                          // for loop
+}
+
+fmt.Println(variable)                             // print
+
+fmt.Printf("%d - %b - $b \n", 42, 42, 42)            // print format - %d = decimal - %b = binary - \n = newline
