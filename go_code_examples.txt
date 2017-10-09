@@ -2,7 +2,12 @@ package "package name"                            // declare package name
 
 import " "library/file name/location" "           // import file/library
 
+var b string                                      // declare variable - zero value
+b = "blue"                                        // assign variable
+var b string = "blue"                             // initialize variable
+
 var count = 0                                     // create a variable
+count := 10                                       // create a variable -shorthand
 
 for i := 1; i < 5; i++ {                          // for loop
 }
@@ -10,3 +15,33 @@ for i := 1; i < 5; i++ {                          // for loop
 fmt.Println(variable)                             // print
 
 fmt.Printf("%d - %b - $b \n", 42, 42, 42)            // print format - %d = decimal - %b = binary - \n = newline
+%v                                                   // default value type
+%t                                                   // show variable type
+
+------ lowercase function/variables are not exported - uppercase functions/variable are exported
+
+func main() {
+  "function name" := func () "type returned" {
+  }
+}                 // anonymous  function - used when you need to create a function inside another function
+
+------- a function can return a function
+
+a, _ := count()           // _ = blank identifier for when you know you wont be using the returned data (yet)
+
+website, error := http.Get("website address")        // get a website's code
+page, error := ioutil.ReadAll(website.Body)         // reads the website's body into a variable
+website.Body.Close()                                 // closes website's body
+fmt.Printf("%s", page)                              // prints website's body code
+
+const con_a string = "text"                                      // create a constant
+
+const (  // iota increments by 1 every time it is defined in the same area (it restarts at 0 in the next area it is defined)
+  _ = iota // 0
+  KB = 1 << (iota * 10) // 1 << (1 * 10)
+  MB = 1 << (iota * 10) // 1 << (2 * 10)          // bit shifting
+  GB = 1 << (iota * 10) // 1 << (3 * 10)
+)
+
+const hello = "hello world"  // untyped constant - is not forced to obey the strict rule that prevent combining different type values
+const hello string = "hello world"   // typed constant that must follow the rules
