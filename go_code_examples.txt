@@ -1,4 +1,4 @@
-package "package name"                            // declare package name
+package "package name"       // declare package name - files in the same package can use each others content -except for imports
 
 import " "library/file name/location" "           // import file/library
 
