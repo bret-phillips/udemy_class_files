@@ -45,3 +45,26 @@ const (  // iota increments by 1 every time it is defined in the same area (it r
 
 const hello = "hello world"  // untyped constant - is not forced to obey the strict rule that prevent combining different type values
 const hello string = "hello world"   // typed constant that must follow the rules
+
+var meters float64                   // create variable to hold input
+fmt.Print("Enter meters swam: ")    // ask for input
+fmt.Scan(&meters)                    // receive input - & = store in memory address
+
+var a int = 42   // int
+var b *int = &a  // pointer to an int - reference - &a = address of variable a in memory
+fmt.Println(*b)  // print the value that b is pointing to (a's value) - dereference
+
+----- passing pointers instead of large variables can speed up code and result in a quicker program
+----- also, changes made to the pointer passed to a function function will carry will effect the value outside of the function , even without returning it
+
+if x == 1 {       // if else statements
+} else {
+}
+
+if i % 2 == 1 {    // tell if a number is odd or even
+  fmt.Println("odd")
+} else {
+  fmt.Println("even")
+}
+
+var  // usually only used to set the zero value

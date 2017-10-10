@@ -3,7 +3,11 @@ package main
 import "fmt"
 
 func main() {
-	for i := 0; i < 200; i++ {
-		fmt.Printf("%d \t %b \t %x \t %q \n", i, i, i, i)
-	}
+
+	var myName string
+
+	fmt.Print("Enter your name: ")
+	fmt.Scan(&myName)
+	fmt.Println(myName)
+
 }
